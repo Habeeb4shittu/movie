@@ -1,0 +1,35 @@
+#searchBar{
+    margin: .8rem auto;
+    width: 90%;
+    background: white;
+    padding: .2rem .7rem;
+    border-radius: $radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    flex-direction: row-reverse;
+    box-shadow: 0 0 2px 3px #ff00002a;
+    @media screen and (min-width: $lgScreen) {
+        width: 75%;
+    }
+    #search{
+        width: 100%;
+        height: 90%;
+        border: none;
+        color: $text;
+        text-shadow: 0px 1px 1px $accent;
+        font-size: 1rem;
+        &:focus{
+            outline: none;
+        }
+        &::placeholder{
+            color: $text;
+            text-shadow: 0px 1px 1px $accent;
+            font-size: 1rem;
+        }
+    }
+    .search{
+        color: $text;
+    }
+}

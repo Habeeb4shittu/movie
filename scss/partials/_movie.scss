@@ -1,0 +1,92 @@
+.movie {
+    transition     : $trans;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    margin         : auto;
+    width          : 80%;
+    height         : 100%;
+
+    &.slide {
+        transform: translateX(150%);
+    }
+
+    .arrow {
+        position: absolute;
+        top     : 2rem;
+        left    : 2rem;
+        cursor  : pointer;
+
+        .back {
+            color    : $text;
+            font-size: 1.5rem;
+        }
+    }
+
+    .main {
+        width          : 80%;
+        margin         : auto;
+        height         : fit-content;
+        border-radius  : 2rem;
+        justify-content: space-between;
+        align-items    : center;
+        display        : flex;
+        min-height     : 300px;
+        max-height     : 450px;
+        overflow       : hidden;
+        gap            : 0.5rem;
+        background     : #00b7aa;
+        box-shadow     : 0 0 2px 4px $shadow;
+
+        @media screen and (max-width: $lgScreen) {
+            flex-direction: column;
+            width         : 100%;
+        }
+
+        .image {
+            overflow: hidden;
+            width   : 70%;
+            height  : 100%;
+
+            img {
+                transition: $trans;
+                width     : 100%;
+                height    : 100%;
+                object-fit: cover;
+            }
+
+            @media screen and (max-width: $lgScreen) {
+                width: 100%;
+            }
+        }
+
+        .details {
+            background     : #00b7aa;
+            height         : 100%;
+            width          : 30%;
+            display        : flex;
+            gap            : 1.4rem;
+            align-items    : center;
+            justify-content: center;
+            flex-direction : column;
+
+            @media screen and (max-width: $lgScreen) {
+                width  : 100%;
+                padding: 2rem;
+            }
+
+            .detail {
+                width         : 100%;
+                gap           : 0.2rem;
+                display       : flex;
+                color         : #b5ffff;
+                flex-direction: row;
+
+                // justify-content: space-between;
+                .fa-star {
+                    color: $star;
+                }
+            }
+        }
+    }
+}
