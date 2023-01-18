@@ -17,17 +17,16 @@
 //         `)
 //         // console.log(el.titleText.text)
 // });
-import {movie} from './movie.js'
-class Movie
-{
-    constructor( props )
-    {
+import {
+    movie
+} from './movie.js'
+class Movie {
+    constructor(props) {
         props.forEach(prop => {
             this.showMovie(prop)
         });
     }
-    showMovie(prop)
-    {
+    showMovie(prop) {
         let content = $(`
             <div class="card" class="${prop.title}">
                 <div class="image">
@@ -48,6 +47,7 @@ class Movie
         $('main').find('.movieArea').append(content)
     }
 }
+
 function searchBar() {
     let content = $(`
         <div id="searchBar">
@@ -56,10 +56,10 @@ function searchBar() {
         </div>
     `)
     $("main").append(content)
-    $("#search").on('input', function (){
+    $("#search").on('input', function () {
         let search = $(this).val()
         let movies = $(".card .foot .name")
-        movies.each(function (i, el){
+        movies.each(function (i, el) {
             if ($(el).text().toLowerCase().includes(search.toLowerCase())) {
                 $(el).parent().parent().show()
             } else {
@@ -68,6 +68,7 @@ function searchBar() {
         })
     })
 }
+
 function movieArea() {
     let content = $(`
     <div class="movieArea"></div>
@@ -76,7 +77,7 @@ function movieArea() {
     new Movie(movie)
     let movies = $(".movieArea").find(".card")
     movies.each(function (i, el) {
-        $(el).on('click', function (){
+        $(el).on('click', function () {
             $("main").addClass("slide")
             setTimeout(() => {
                 $("body").prepend(`
@@ -114,7 +115,7 @@ function movieArea() {
                         <i class="fas fa-star"></i>
                     `)
                 }
-                $("body").find(".arrow").on('click', function (){
+                $("body").find(".arrow").on('click', function () {
                     $("main").removeClass("slide")
                     $(".movie").addClass("slide")
                     $(".movie").hide(50)
@@ -126,6 +127,7 @@ function movieArea() {
         })
     })
 }
+
 function homePage() {
     searchBar()
     movieArea()
