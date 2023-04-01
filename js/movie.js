@@ -1,7 +1,7 @@
 export let movie = [
     {
         title: "The Absolute Thinker", 
-        imgSrc: "../assets/absolute_thinker.jpg",
+        imgSrc: "./assets/absolute_thinker.jpg",
         releaseDate: "2021",
         author: "Micheal Anoulily",
         ratings: 5, 
@@ -9,7 +9,7 @@ export let movie = [
     },
     {
         title: "The Twin Drummer", 
-        imgSrc: "../assets/the_drummer.jpeg",
+        imgSrc: "./assets/the_drummer.jpeg",
         releaseDate: "1998",
         author: "Bro Kenny",
         ratings: 3, 
@@ -17,7 +17,7 @@ export let movie = [
     },
     {
         title: "The Smiler", 
-        imgSrc: "../assets/the_smiler.jpg",
+        imgSrc: "./assets/the_smiler.jpg",
         releaseDate: "2016",
         author: "Smiler Jnr",
         ratings: 4, 
@@ -25,7 +25,7 @@ export let movie = [
     },
     {
         title: "Cunny Hacker", 
-        imgSrc: "../assets/cunny_hacker.png",
+        imgSrc: "./assets/cunny_hacker.png",
         releaseDate: "2021",
         author: "Hacker Gee",
         ratings: 1, 
@@ -33,7 +33,7 @@ export let movie = [
     },
     {
         title: "Disturbed", 
-        imgSrc: "../assets/disturbed.jpg",
+        imgSrc: "./assets/disturbed.jpg",
         releaseDate: "2021",
         author: "Tony Stark",
         ratings: 5, 
